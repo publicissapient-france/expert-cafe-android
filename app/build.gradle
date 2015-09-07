@@ -1,0 +1,68 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.parse'
+
+def config = [
+        parseApplicationId: "",
+        parseClientKey    : ""
+]
+
+buildscript {
+    repositories {
+        mavenCentral()
+        maven { url 'https://maven.parse.com/repo' }
+    }
+    dependencies {
+        classpath 'com.parse.tools:gradle:1.1'
+    }
+}
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.0"
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+    defaultConfig {
+        applicationId "fr.xebia.expertcafe"
+        minSdkVersion 19
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        debug {
+            applicationIdSuffix ".debug"
+            buildConfigField("String", "PARSE_APPLICATION_ID", "\"${config.parseApplicationId}\"")
+            buildConfigField("String", "PARSE_CLIENT_KEY", "\"${config.clientKey}\"")
+        }
+
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile 'com.android.support:appcompat-v7:23.0.0'
+    compile 'com.parse.bolts:bolts-android:1.2.1'
+    compile 'com.parse:parse-android:1.10.1'
+}
+
+task loadProperties << {
+    def Properties props = new Properties()
+    def propFile = new File('local.properties')
+    props.load(new FileInputStream(propFile))
+
+    config.parseApplicationId = props['parse.applicationId']
+    config.parseClientKey = props['parse.clientKey']
+
+    logger.info("parseApplicationId: ${config.parseApplicationId}")
+    logger.info("parseClientKey: ${config.parseClientKey}")
+}
+
+preBuild.dependsOn loadProperties
