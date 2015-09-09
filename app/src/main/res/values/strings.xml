@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">expertcafe</string>
+    <string name="title_available_time">Schedule</string>
+    <string name="title_subscription">Subscription</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="subject">Subject</string>
 </resources>
