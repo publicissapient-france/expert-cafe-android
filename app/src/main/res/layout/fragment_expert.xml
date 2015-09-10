@@ -15,88 +15,140 @@
         card_view:cardCornerRadius="@dimen/radius"
         card_view:cardElevation="@dimen/elevation">
 
-        <RelativeLayout
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="@dimen/margin">
+            android:fillViewport="true">
 
-            <ImageView
-                android:id="@+id/picImageView"
-                android:layout_width="200dp"
-                android:layout_height="275dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/scivetta"
-                tools:ignore="ContentDescription"/>
-
-            <TextView
-                android:id="@+id/descTextView"
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_toRightOf="@id/picImageView"
-                android:ellipsize="marquee"
-                android:maxHeight="275dp"
-                android:paddingLeft="10dp"
-                tools:text="Explanation about the speaker."/>
+                android:padding="@dimen/margin">
 
-            <TextView
-                android:id="@+id/availableTimeTextView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/picImageView"
-                android:layout_marginTop="@dimen/margin"
-                android:text="@string/title_available_time"/>
+                <ImageView
+                    android:id="@+id/picImageView"
+                    android:layout_width="200dp"
+                    android:layout_height="275dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/scivetta"
+                    tools:ignore="ContentDescription"/>
 
-            <TextView
-                android:id="@+id/subscriptionTextView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/availableTimeTextView"
-                android:layout_marginTop="@dimen/margin"
-                android:text="@string/title_subscription"/>
-
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/nameTextInputLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/subscriptionTextView"
-                android:layout_marginTop="@dimen/margin">
-
-                <EditText
-                    android:id="@+id/nameEditText"
+                <TextView
+                    android:id="@+id/descTextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/name"/>
-            </android.support.design.widget.TextInputLayout>
+                    android:layout_alignParentRight="true"
+                    android:layout_toRightOf="@id/picImageView"
+                    android:ellipsize="marquee"
+                    android:maxHeight="275dp"
+                    android:paddingLeft="10dp"
+                    tools:text="Explanation about the speaker."/>
 
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/emailTextInputLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/nameTextInputLayout"
-                android:layout_marginTop="@dimen/margin">
-
-                <EditText
-                    android:id="@+id/emailEditText"
+                <TextView
+                    android:id="@+id/availableTimeTextView"
+                    style="@style/AppTheme.TitleText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/email"/>
-            </android.support.design.widget.TextInputLayout>
+                    android:layout_below="@id/picImageView"
+                    android:layout_marginTop="@dimen/margin"
+                    android:text="@string/title_available_time"/>
 
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/subjectTextInputLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/emailTextInputLayout"
-                android:layout_marginTop="@dimen/margin">
-
-                <EditText
-                    android:id="@+id/subjectEditText"
+                <LinearLayout
+                    android:id="@+id/timeTenGroup"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/subject"/>
-            </android.support.design.widget.TextInputLayout>
-        </RelativeLayout>
+                    android:layout_below="@+id/availableTimeTextView"
+                    android:layout_marginTop="@dimen/margin"
+                    android:orientation="horizontal">
+
+                    <Button
+                        style="@style/AppTheme.TimeButton"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/ten0"/>
+
+                    <Button
+                        style="@style/AppTheme.TimeButton"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/ten1"/>
+
+                    <Button
+                        style="@style/AppTheme.TimeButton"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/ten2"/>
+
+                    <Button
+                        style="@style/AppTheme.TimeButton"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/ten3"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/subscriptionTextView"
+                    style="@style/AppTheme.TitleText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/timeTenGroup"
+                    android:layout_marginTop="@dimen/margin"
+                    android:text="@string/title_subscription"/>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/nameTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/subscriptionTextView"
+                    android:layout_marginTop="@dimen/margin">
+
+                    <EditText
+                        android:id="@+id/nameEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/name"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/emailTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/nameTextInputLayout"
+                    android:layout_marginTop="@dimen/margin">
+
+                    <EditText
+                        android:id="@+id/emailEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/email"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/subjectTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/emailTextInputLayout"
+                    android:layout_marginTop="@dimen/margin">
+
+                    <EditText
+                        android:id="@+id/subjectEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="top|left"
+                        android:hint="@string/subject"
+                        android:inputType="textMultiLine"
+                        android:lines="8"
+                        android:maxLines="10"
+                        android:minLines="6"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <Button
+                    style="@style/AppTheme.Button"
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/subjectTextInputLayout"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/button_subscribe"/>
+            </RelativeLayout>
+        </ScrollView>
     </android.support.v7.widget.CardView>
-
 </FrameLayout>

@@ -6,6 +6,7 @@ import android.support.v4.view.ViewPager;
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseQuery;
+import com.viewpagerindicator.CirclePageIndicator;
 
 import java.util.List;
 
@@ -17,6 +18,7 @@ import timber.log.Timber;
 public class ExpertPagerActivity extends BaseActivity {
 
     @Bind(R.id.viewPager) ViewPager pager;
+    @Bind(R.id.pagerIndicator) CirclePageIndicator pageIndicator;
 
     private ExpertPagerAdapter adapter;
 
@@ -49,6 +51,7 @@ public class ExpertPagerActivity extends BaseActivity {
     private void setupPager() {
         adapter = new ExpertPagerAdapter(getSupportFragmentManager());
         pager.setAdapter(adapter);
+        pageIndicator.setViewPager(pager);
     }
 
 }

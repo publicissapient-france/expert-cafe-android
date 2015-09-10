@@ -5,4 +5,9 @@
     <string name="name">Name</string>
     <string name="email">Email</string>
     <string name="subject">Subject</string>
+    <string name="button_subscribe">Subscribe</string>
+    <string name="ten0">10h–10h15</string>
+    <string name="ten1">10h15–10h30</string>
+    <string name="ten2">10h30–10h45</string>
+    <string name="ten3">10h45–11h</string>
 </resources>

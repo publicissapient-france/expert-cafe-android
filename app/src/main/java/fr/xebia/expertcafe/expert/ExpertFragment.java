@@ -2,22 +2,27 @@ package fr.xebia.expertcafe.expert;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.parse.GetCallback;
 import com.parse.ParseException;
 import com.parse.ParseQuery;
+import com.squareup.picasso.Picasso;
 
 import butterknife.Bind;
 import fr.xebia.expertcafe.R;
 import fr.xebia.expertcafe.common.BaseFragment;
+import fr.xebia.expertcafe.transformation.RoundedTransformation;
 import timber.log.Timber;
 
 public class ExpertFragment extends BaseFragment {
 
     public static final String BUNDLE_EXPERT_ID = "BUNDLE_EXPERT_ID";
+    public static final RoundedTransformation ROUNDED_TRANSFORMATION = new RoundedTransformation(6, 0);
 
     @Bind(R.id.descTextView) TextView descTextView;
+    @Bind(R.id.picImageView) ImageView picImageView;
 
     private Expert expert;
     private String expertId;
@@ -60,5 +65,11 @@ public class ExpertFragment extends BaseFragment {
 
     protected void bindView() {
         descTextView.setText(expert.getDescription());
+        Picasso.with(getActivity())
+                .load(expert.getPicture().getUrl())
+                .fit()
+                .centerCrop()
+                .transform(ROUNDED_TRANSFORMATION)
+                .into(picImageView);
     }
 }

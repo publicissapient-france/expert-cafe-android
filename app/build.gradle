@@ -3,8 +3,8 @@ apply plugin: 'com.parse'
 
 buildscript {
     repositories {
-        mavenCentral()
         maven { url 'https://maven.parse.com/repo' }
+        mavenCentral()
     }
     dependencies {
         classpath 'com.parse.tools:gradle:1.1'
@@ -59,6 +59,8 @@ dependencies {
             'com.parse.bolts:bolts-android:1.2.1',
             'com.parse:parse-android:1.10.1',
             'com.jakewharton:butterknife:7.0.1',
-            'com.jakewharton.timber:timber:3.1.0'
+            'com.jakewharton.timber:timber:3.1.0',
+            'com.viewpagerindicator:library:2.4.1@aar',
+            'com.squareup.picasso:picasso:2.5.2'
     )
 }
