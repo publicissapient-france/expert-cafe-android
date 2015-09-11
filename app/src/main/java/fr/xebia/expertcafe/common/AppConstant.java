@@ -22,10 +22,18 @@ public interface AppConstant {
         TEN_1,
         TEN_2,
         TEN_3,
-        ELEVEN_0,
-        ELEVEN_1,
-        ELEVEN_2,
-        ELEVEN_3
+
+        UNKNOWN;
+
+        public static Time from(String fromTime) {
+            Time time;
+            try {
+                time = Time.valueOf(fromTime);
+            } catch (IllegalArgumentException e) {
+                time = UNKNOWN;
+            }
+            return time;
+        }
     }
 
 }

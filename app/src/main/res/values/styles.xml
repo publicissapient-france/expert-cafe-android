@@ -20,9 +20,9 @@
 
     </style>
 
-    <style name="AppTheme.Button" parent="Base.Widget.AppCompat.Button">
+    <style name="AppTheme.Button">
 
-        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textColor">@drawable/color_button</item>
         <item name="android:layout_height">@dimen/button</item>
         <item name="android:textAllCaps">true</item>
 
@@ -30,7 +30,7 @@
 
     <style name="AppTheme.TimeButton" parent="AppTheme.Button">
 
-        <item name="android:background">@drawable/time_button</item>
+        <item name="android:background">@drawable/background_time_button</item>
 
     </style>
 

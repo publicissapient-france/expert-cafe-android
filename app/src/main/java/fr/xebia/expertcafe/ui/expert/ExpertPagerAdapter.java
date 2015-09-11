@@ -1,4 +1,4 @@
-package fr.xebia.expertcafe.expert;
+package fr.xebia.expertcafe.ui.expert;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -6,6 +6,8 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import fr.xebia.expertcafe.model.Expert;
 
 public class ExpertPagerAdapter extends FragmentPagerAdapter {
 

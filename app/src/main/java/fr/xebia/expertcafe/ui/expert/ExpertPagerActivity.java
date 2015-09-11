@@ -1,10 +1,12 @@
-package fr.xebia.expertcafe.expert;
+package fr.xebia.expertcafe.ui.expert;
 
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 
+import com.parse.DeleteCallback;
 import com.parse.FindCallback;
 import com.parse.ParseException;
+import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.viewpagerindicator.CirclePageIndicator;
 
@@ -13,7 +15,10 @@ import java.util.List;
 import butterknife.Bind;
 import fr.xebia.expertcafe.R;
 import fr.xebia.expertcafe.common.BaseActivity;
+import fr.xebia.expertcafe.model.Expert;
 import timber.log.Timber;
+
+import static fr.xebia.expertcafe.common.ParseConstant.EXPERT_TABLE;
 
 public class ExpertPagerActivity extends BaseActivity {
 
@@ -34,13 +39,17 @@ public class ExpertPagerActivity extends BaseActivity {
     }
 
     private void getExperts() {
-        ParseQuery<Expert> query = new ParseQuery<>(Expert.class);
-        query.fromLocalDatastore();
+        final ParseQuery<Expert> query = new ParseQuery<>(Expert.class);
         query.findInBackground(new FindCallback<Expert>() {
             @Override
-            public void done(List<Expert> experts, ParseException e) {
+            public void done(final List<Expert> experts, ParseException e) {
                 if (e == null) {
-                    adapter.setExperts(experts);
+                    ParseObject.unpinAllInBackground(EXPERT_TABLE, new DeleteCallback() {
+                        public void done(ParseException e) {
+                            ParseObject.pinAllInBackground(EXPERT_TABLE, experts);
+                            adapter.setExperts(experts);
+                        }
+                    });
                 } else {
                     Timber.e(e, "Cannot get experts");
                 }

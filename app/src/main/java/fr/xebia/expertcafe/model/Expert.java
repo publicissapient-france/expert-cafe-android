@@ -1,4 +1,4 @@
-package fr.xebia.expertcafe.expert;
+package fr.xebia.expertcafe.model;
 
 import com.parse.ParseClassName;
 import com.parse.ParseFile;
@@ -8,14 +8,15 @@ import fr.xebia.expertcafe.common.AppConstant;
 import fr.xebia.expertcafe.common.ParseConstant;
 
 import static fr.xebia.expertcafe.common.ParseConstant.DESCRIPTION;
-import static fr.xebia.expertcafe.common.ParseConstant.EXPERT_DOMAIN;
+import static fr.xebia.expertcafe.common.ParseConstant.DOMAIN;
+import static fr.xebia.expertcafe.common.ParseConstant.EXPERT_TABLE;
 import static fr.xebia.expertcafe.common.ParseConstant.PICTURE;
 
-@ParseClassName(ParseConstant.EXPERT)
+@ParseClassName(EXPERT_TABLE)
 public class Expert extends ParseObject {
 
     public void setDomain(AppConstant.Domain domain) {
-        put(EXPERT_DOMAIN, domain.name());
+        put(DOMAIN, domain.name());
     }
 
     public void setDescription(String description) {
@@ -27,7 +28,7 @@ public class Expert extends ParseObject {
     }
 
     public AppConstant.Domain getDomain() {
-        return AppConstant.Domain.from(getString(EXPERT_DOMAIN));
+        return AppConstant.Domain.from(getString(DOMAIN));
     }
 
     public String getDescription() {
