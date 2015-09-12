@@ -110,7 +110,8 @@
                         android:id="@+id/nameEditText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/name"/>
+                        android:hint="@string/name"
+                        android:inputType="textCapWords"/>
                 </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout
@@ -124,7 +125,8 @@
                         android:id="@+id/emailEditText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/email"/>
+                        android:hint="@string/email"
+                        android:inputType="textEmailAddress"/>
                 </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout
@@ -140,7 +142,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="top|left"
                         android:hint="@string/subject"
-                        android:inputType="textMultiLine"
+                        android:inputType="textMultiLine|textAutoComplete|textAutoCorrect|textCapSentences"
                         android:lines="8"
                         android:maxLines="10"
                         android:minLines="6"/>
