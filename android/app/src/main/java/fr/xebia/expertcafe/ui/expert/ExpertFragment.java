@@ -1,6 +1,8 @@
 package fr.xebia.expertcafe.ui.expert;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.View;
@@ -164,26 +166,44 @@ public class ExpertFragment extends BaseFragment {
             @Override
             public void done(int count, ParseException e) {
                 if (e == null) {
-                    dialog.setMessage("Saving appointment");
-                    meeting.saveInBackground(new SaveCallback() {
-                        @Override
-                        public void done(ParseException e) {
-                            dialog.dismiss();
-                            if (e == null) {
-                                Toast.makeText(getActivity(), "Appointment booked, confirmation sent by email", Toast.LENGTH_LONG).show();
-                                clearForm();
-                                syncTime();
-                            } else {
-                                Toast.makeText(getActivity(), "Cannot book appointment", Toast.LENGTH_LONG).show();
-                                Timber.e(e, "Cannot book appointment");
+                    if (count > 0) {
+                        dialog.dismiss();
+                        syncTime();
+                        alertTimeBooked();
+                    } else {
+                        dialog.setMessage("Saving appointment");
+                        meeting.saveInBackground(new SaveCallback() {
+                            @Override
+                            public void done(ParseException e) {
+                                dialog.dismiss();
+                                if (e == null) {
+                                    Toast.makeText(getActivity(), "Appointment booked, confirmation sent by email", Toast.LENGTH_LONG).show();
+                                    clearForm();
+                                    syncTime();
+                                } else {
+                                    Toast.makeText(getActivity(), "Cannot book appointment", Toast.LENGTH_LONG).show();
+                                    Timber.e(e, "Cannot book appointment");
+                                }
                             }
-                        }
-                    });
+                        });
+                    }
                 } else {
                     dialog.dismiss();
                     Timber.e(e, "Cannot check time availability");
                     Toast.makeText(getActivity(), "Cannot check time availability", Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+    }
+
+    private void alertTimeBooked() {
+        AlertDialog alertDialog = new AlertDialog.Builder(getActivity()).create();
+        alertDialog.setMessage("Chosen time already booked, please choose another time");
+        alertDialog.setTitle("Alert");
+        alertDialog.setButton(DialogInterface.BUTTON_NEUTRAL, getString(android.R.string.ok), new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
             }
         });
     }
