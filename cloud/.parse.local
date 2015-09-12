@@ -1,0 +1,10 @@
+{
+  "applications": {
+    "_default": {
+      "link": "expert-cafe"
+    },
+    "expert-cafe": {
+      "applicationId": "d9F9vHaT2lUnReMleT9P1IZE9GAYo2nYOHf01Azl"
+    }
+  }
+}
