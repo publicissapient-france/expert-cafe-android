@@ -63,7 +63,7 @@ Parse.Cloud.afterSave("Meeting", function (request) {
 
             message(request.object.get("email"), "Expert Café: booked",
                 "Hello " + attendeeName + "," +
-                "\n\nAppointment booked at " + appointmentTime + " with " + expertName + " for " + expert.get('domain') + "." +
+                "\n\nAppointment booked " + appointmentTime + " with " + expertName + " for " + expert.get('domain') + "." +
                 "\n\nRegards," +
                 "\nExpert Café Team");
 
