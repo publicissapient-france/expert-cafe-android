@@ -1,13 +1,16 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.parse'
+apply plugin: 'io.fabric'
 
 buildscript {
     repositories {
+        maven { url 'https://maven.fabric.io/public' }
         maven { url 'https://maven.parse.com/repo' }
         mavenCentral()
     }
     dependencies {
         classpath 'com.parse.tools:gradle:1.1'
+        classpath 'io.fabric.tools:gradle:1.19.2'
     }
 }
 
@@ -50,6 +53,7 @@ android {
             applicationIdSuffix ".debug"
             buildConfigField "String", "PARSE_APPLICATION_ID", "\"${expertCafeApplicationId}\""
             buildConfigField "String", "PARSE_CLIENT_KEY", "\"${expertCafeClientKey}\""
+            ext.enableCrashlytics = false
         }
 
         release {
@@ -76,4 +80,8 @@ dependencies {
             'com.viewpagerindicator:library:2.4.1@aar',
             'com.squareup.picasso:picasso:2.5.2'
     )
+
+    compile('com.crashlytics.sdk.android:crashlytics:2.5.2@aar') {
+        transitive = true
+    }
 }

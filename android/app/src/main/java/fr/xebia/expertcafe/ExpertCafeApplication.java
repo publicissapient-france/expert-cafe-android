@@ -2,11 +2,13 @@ package fr.xebia.expertcafe;
 
 import android.app.Application;
 
+import com.crashlytics.android.Crashlytics;
 import com.parse.Parse;
 import com.parse.ParseObject;
 
 import fr.xebia.expertcafe.model.Expert;
 import fr.xebia.expertcafe.model.Meeting;
+import io.fabric.sdk.android.Fabric;
 import timber.log.Timber;
 
 public class ExpertCafeApplication extends Application {
@@ -15,7 +17,12 @@ public class ExpertCafeApplication extends Application {
     public void onCreate() {
         super.onCreate();
         initializeLog();
+        initializeCrashlytics();
         initializeParse();
+    }
+
+    private void initializeCrashlytics() {
+        Fabric.with(this, new Crashlytics());
     }
 
     private void initializeLog() {
