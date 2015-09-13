@@ -349,7 +349,16 @@ public class ExpertFragment extends BaseFragment {
     }
 
     private void alertFormInvalid() {
-
+        AlertDialog dialog = new AlertDialog.Builder(getActivity()).create();
+        dialog.setMessage("All fields are mandatory, please edit form");
+        dialog.setTitle("Alert");
+        dialog.setButton(DialogInterface.BUTTON_NEUTRAL, getString(android.R.string.ok), new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        dialog.show();
     }
 
     private void alertTimeBooked() {
