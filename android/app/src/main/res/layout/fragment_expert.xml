@@ -90,12 +90,280 @@
                         android:text="@string/ten3"/>
                 </LinearLayout>
 
+                <LinearLayout
+                    android:id="@+id/timeElevenGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/timeTenGroup"
+                    android:layout_marginTop="@dimen/margin"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/eleven0Button"
+                        style="@style/AppTheme.TimeButton"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/eleven0"/>
+
+                    <Button
+                        android:id="@+id/eleven1Button"
+                        style="@style/AppTheme.TimeButton"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/eleven1"/>
+
+                    <Button
+                        android:id="@+id/eleven2Button"
+                        style="@style/AppTheme.TimeButton"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/eleven2"/>
+
+                    <Button
+                        android:id="@+id/eleven3Button"
+                        style="@style/AppTheme.TimeButton"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/eleven3"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/timeTwelveGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/timeElevenGroup"
+                    android:layout_marginTop="@dimen/margin"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/twelve0Button"
+                        style="@style/AppTheme.TimeButton"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/twelve0"/>
+
+                    <Button
+                        android:id="@+id/twelve1Button"
+                        style="@style/AppTheme.TimeButton"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/twelve1"/>
+
+                    <Button
+                        android:id="@+id/twelve2Button"
+                        style="@style/AppTheme.TimeButton"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/twelve2"/>
+
+                    <Button
+                        android:id="@+id/twelve3Button"
+                        style="@style/AppTheme.TimeButton"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/twelve3"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/timeOneGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/timeTwelveGroup"
+                    android:layout_marginTop="@dimen/margin"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/one0Button"
+                        style="@style/AppTheme.TimeButton"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/one0"/>
+
+                    <Button
+                        android:id="@+id/one1Button"
+                        style="@style/AppTheme.TimeButton"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/one1"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/timeTwoGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/timeOneGroup"
+                    android:layout_marginTop="@dimen/margin"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/two0Button"
+                        style="@style/AppTheme.TimeButton"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/two0"/>
+
+                    <Button
+                        android:id="@+id/two1Button"
+                        style="@style/AppTheme.TimeButton"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/two1"/>
+
+                    <Button
+                        android:id="@+id/two2Button"
+                        style="@style/AppTheme.TimeButton"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/two2"/>
+
+                    <Button
+                        android:id="@+id/two3Button"
+                        style="@style/AppTheme.TimeButton"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/two3"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/timeThreeGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/timeTwoGroup"
+                    android:layout_marginTop="@dimen/margin"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/three0Button"
+                        style="@style/AppTheme.TimeButton"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/three0"/>
+
+                    <Button
+                        android:id="@+id/three1Button"
+                        style="@style/AppTheme.TimeButton"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/three1"/>
+
+                    <Button
+                        android:id="@+id/three2Button"
+                        style="@style/AppTheme.TimeButton"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/three2"/>
+
+                    <Button
+                        android:id="@+id/three3Button"
+                        style="@style/AppTheme.TimeButton"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/three3"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/timeFourGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/timeThreeGroup"
+                    android:layout_marginTop="@dimen/margin"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/four0Button"
+                        style="@style/AppTheme.TimeButton"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/four0"/>
+
+                    <Button
+                        android:id="@+id/four1Button"
+                        style="@style/AppTheme.TimeButton"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/four1"/>
+
+                    <Button
+                        android:id="@+id/four2Button"
+                        style="@style/AppTheme.TimeButton"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/four2"/>
+
+                    <Button
+                        android:id="@+id/four3Button"
+                        style="@style/AppTheme.TimeButton"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/four3"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/timeFiveGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/timeFourGroup"
+                    android:layout_marginTop="@dimen/margin"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/five0Button"
+                        style="@style/AppTheme.TimeButton"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/five0"/>
+
+                    <Button
+                        android:id="@+id/five1Button"
+                        style="@style/AppTheme.TimeButton"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/five1"/>
+
+                    <Button
+                        android:id="@+id/five2Button"
+                        style="@style/AppTheme.TimeButton"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/five2"/>
+
+                    <Button
+                        android:id="@+id/five3Button"
+                        style="@style/AppTheme.TimeButton"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/five3"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/timeSixGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/timeFiveGroup"
+                    android:layout_marginTop="@dimen/margin"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/six0Button"
+                        style="@style/AppTheme.TimeButton"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/six0"/>
+
+                    <Button
+                        android:id="@+id/six1Button"
+                        style="@style/AppTheme.TimeButton"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/six1"/>
+                </LinearLayout>
+
                 <TextView
                     android:id="@+id/subscriptionTextView"
                     style="@style/AppTheme.TitleText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/timeTenGroup"
+                    android:layout_below="@+id/timeSixGroup"
                     android:layout_marginTop="@dimen/margin"
                     android:text="@string/title_subscription"/>
 

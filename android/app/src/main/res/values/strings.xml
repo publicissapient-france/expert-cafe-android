@@ -6,8 +6,45 @@
     <string name="email">Email</string>
     <string name="subject">Subject</string>
     <string name="button_subscribe">Subscribe</string>
+
     <string name="ten0">10h–10h15</string>
     <string name="ten1">10h15–10h30</string>
     <string name="ten2">10h30–10h45</string>
     <string name="ten3">10h45–11h</string>
+
+    <string name="eleven0">11h–11h15</string>
+    <string name="eleven1">11h15–11h30</string>
+    <string name="eleven2">11h30–11h45</string>
+    <string name="eleven3">11h45–12h</string>
+
+    <string name="twelve0">12h–12h15</string>
+    <string name="twelve1">12h15–12h30</string>
+    <string name="twelve2">12h30–12h45</string>
+    <string name="twelve3">12h45–13h</string>
+
+    <string name="one0">13h–13h15</string>
+    <string name="one1">13h15–13h30</string>
+
+    <string name="two0">14h–14h15</string>
+    <string name="two1">14h15–14h30</string>
+    <string name="two2">14h30–14h45</string>
+    <string name="two3">14h45–14h</string>
+
+    <string name="three0">15h–15h15</string>
+    <string name="three1">15h15–15h30</string>
+    <string name="three2">15h30–15h45</string>
+    <string name="three3">15h45–16h</string>
+
+    <string name="four0">16h–16h15</string>
+    <string name="four1">16h15–16h30</string>
+    <string name="four2">16h30–16h45</string>
+    <string name="four3">16h45–17h</string>
+
+    <string name="five0">17h–17h15</string>
+    <string name="five1">17h15–17h30</string>
+    <string name="five2">17h30–17h45</string>
+    <string name="five3">17h45–18h</string>
+
+    <string name="six0">18h–18h15</string>
+    <string name="six1">18h15–18h30</string>
 </resources>
