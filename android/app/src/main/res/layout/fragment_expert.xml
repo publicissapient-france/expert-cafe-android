@@ -31,6 +31,7 @@
                     android:layout_height="275dp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/scivetta"
+                    android:layout_marginLeft="3dp"
                     tools:ignore="ContentDescription"/>
 
                 <TextView
@@ -42,6 +43,7 @@
                     android:ellipsize="marquee"
                     android:maxHeight="275dp"
                     android:paddingLeft="10dp"
+                    android:layout_marginRight="3dp"
                     tools:text="Explanation about the speaker."/>
 
                 <TextView
@@ -50,7 +52,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/picImageView"
-                    android:layout_marginTop="@dimen/margin"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="3dp"
                     android:text="@string/title_available_time"/>
 
                 <LinearLayout
@@ -364,7 +367,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/timeSixGroup"
-                    android:layout_marginTop="@dimen/margin"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="3dp"
                     android:text="@string/title_subscription"/>
 
                 <android.support.design.widget.TextInputLayout
