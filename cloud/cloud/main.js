@@ -1,6 +1,6 @@
 Parse.Cloud.afterSave("Meeting", function (request) {
 
-    var toMarketing = "b.lacroix@meetic-corp.com";
+    var toMarketing = "marketing@xebia.fr";
 
     var message = function (to, subject, text) {
         Mailgun.sendEmail({
@@ -20,23 +20,46 @@ Parse.Cloud.afterSave("Meeting", function (request) {
     };
 
     var prettyTime = function (time) {
-        switch (time) {
-            case "TEN_0":
-                return " from 10h to 10h15";
-            case "TEN_1":
-                return " from 10h15 to 10h30";
-            case "TEN_2":
-                return " from 10h30 to 10h45";
-            case "TEN_3":
-                return " from 10h45 to 11h";
-            case "ELEVEN_0":
-                return " from 11h to 11h15";
-            case "ELEVEN_1":
-                return " from 11h15 to 11h30";
-            case "ELEVEN_2":
-                return " from 11h30 to 11h45";
-            case "ELEVEN_3":
-                return " from 11h45 to 12h";
+        var array = time.split('_');
+        var hour;
+        switch (array[0]) {
+            case "TEN":
+                hour = 10;
+                break;
+            case "ELEVEN":
+                hour = 11;
+                break;
+            case "TWELVE":
+                hour = 12;
+                break;
+            case "ONE":
+                hour = 13;
+                break;
+            case "TWO":
+                hour = 14;
+                break;
+            case "THREE":
+                hour = 15;
+                break;
+            case "FOUR":
+                hour = 16;
+                break;
+            case "FIVE":
+                hour = 17;
+                break;
+            case "SIX":
+                hour = 18;
+                break;
+        }
+        switch (array[1]) {
+            case "0":
+                return " from " + hour + "h to " + hour + "h15";
+            case "1":
+                return " from " + hour + "h15 to " + hour + "h30";
+            case "2":
+                return " from " + hour + "h30 to " + hour + "h45";
+            case "3":
+                return " from " + hour + "h45 to " + (hour + 1) + "h";
         }
     };
 
