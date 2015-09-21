@@ -8,6 +8,7 @@ public class ParseConstant {
     public static final String DOMAIN = "domain";
     public static final String DESCRIPTION = "description";
     public static final String PICTURE = "picture";
+    public static final String TIMES = "times";
     public static final String EXPERT = "expert";
     public static final String TIME = "time";
     public static final String NAME = "name";

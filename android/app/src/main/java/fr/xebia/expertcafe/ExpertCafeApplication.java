@@ -22,7 +22,9 @@ public class ExpertCafeApplication extends Application {
     }
 
     private void initializeCrashlytics() {
-        Fabric.with(this, new Crashlytics());
+        if (!BuildConfig.DEBUG) {
+            Fabric.with(this, new Crashlytics());
+        }
     }
 
     private void initializeLog() {

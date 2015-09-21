@@ -13,6 +13,7 @@ public abstract class BaseFragment extends Fragment {
 
     public static final String BUNDLE_LAYOUT_ID = "BUNDLE_LAYOUT_ID";
     public static final String BUNDLE_BIND = "BUNDLE_BIND";
+    public static final String STRING = "string";
 
     private int layoutId;
     private boolean bind;
@@ -44,5 +45,9 @@ public abstract class BaseFragment extends Fragment {
         if (bind) {
             ButterKnife.unbind(this);
         }
+    }
+
+    public int getStringByName(String name) {
+        return getResources().getIdentifier(name, STRING, getActivity().getPackageName());
     }
 }
