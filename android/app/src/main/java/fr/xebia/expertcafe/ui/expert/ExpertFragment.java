@@ -117,6 +117,15 @@ public class ExpertFragment extends BaseFragment {
         }
     }
 
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        if (expert != null) {
+            bindView();
+        }
+    }
+
     protected void bindView() {
         domainText.setText(expert.getDomain());
         descTextView.setText(expert.getDescription());
