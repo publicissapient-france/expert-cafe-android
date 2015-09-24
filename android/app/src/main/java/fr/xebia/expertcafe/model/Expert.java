@@ -14,28 +14,14 @@ import fr.xebia.expertcafe.common.AppConstant;
 import fr.xebia.expertcafe.common.ParseConstant;
 import timber.log.Timber;
 
-import static fr.xebia.expertcafe.common.ParseConstant.DESCRIPTION;
 import static fr.xebia.expertcafe.common.ParseConstant.DOMAIN;
 import static fr.xebia.expertcafe.common.ParseConstant.EXPERT_TABLE;
-import static fr.xebia.expertcafe.common.ParseConstant.PICTURE;
 import static fr.xebia.expertcafe.common.ParseConstant.TIMES;
 
 @ParseClassName(EXPERT_TABLE)
 public class Expert extends ParseObject {
 
     private List<AppConstant.Time> times;
-
-    public void setDomain(AppConstant.Domain domain) {
-        put(DOMAIN, domain.name());
-    }
-
-    public void setDescription(String description) {
-        put(DESCRIPTION, description);
-    }
-
-    public void setPicture(ParseFile picture) {
-        put(PICTURE, picture);
-    }
 
     public List<AppConstant.Time> getTimes() {
         if (times != null) {
@@ -57,8 +43,8 @@ public class Expert extends ParseObject {
         return times;
     }
 
-    public AppConstant.Domain getDomain() {
-        return AppConstant.Domain.from(getString(DOMAIN));
+    public String getDomain() {
+        return getString(DOMAIN).trim();
     }
 
     public String getDescription() {

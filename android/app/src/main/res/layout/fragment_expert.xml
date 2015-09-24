@@ -35,7 +35,8 @@
                     tools:ignore="ContentDescription"/>
 
                 <TextView
-                    android:id="@+id/descTextView"
+                    android:id="@+id/domainTextView"
+                    style="@style/AppTheme.TitleText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
@@ -44,11 +45,28 @@
                     android:ellipsize="marquee"
                     android:maxHeight="275dp"
                     android:paddingLeft="10dp"
-                    tools:text="Explanation about the speaker."/>
+                    tools:text="Mobile"/>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/picImageView"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/domainTextView"
+                    android:layout_marginRight="3dp"
+                    android:layout_toRightOf="@id/picImageView"
+                    android:paddingLeft="10dp">
+
+                    <TextView
+                        android:id="@+id/descTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:text="Explanation about the speaker."/>
+                </ScrollView>
 
                 <TextView
                     android:id="@+id/availableTimeTextView"
-                    style="@style/AppTheme.TitleText"
+                    style="@style/AppTheme.SubTitleText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/picImageView"
@@ -65,7 +83,7 @@
 
                 <TextView
                     android:id="@+id/subscriptionTextView"
-                    style="@style/AppTheme.TitleText"
+                    style="@style/AppTheme.SubTitleText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/timesGroup"

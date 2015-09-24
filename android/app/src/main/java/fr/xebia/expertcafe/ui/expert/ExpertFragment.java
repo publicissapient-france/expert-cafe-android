@@ -56,6 +56,7 @@ public class ExpertFragment extends BaseFragment {
     @Bind(R.id.emailEditText) EditText emailEditText;
     @Bind(R.id.subjectEditText) EditText subjectEditText;
     @Bind(R.id.timesGroup) ViewGroup timesGroup;
+    @Bind(R.id.domainTextView) TextView domainText;
 
     private final View.OnClickListener onClickListener = new View.OnClickListener() {
         @Override
@@ -117,6 +118,7 @@ public class ExpertFragment extends BaseFragment {
     }
 
     protected void bindView() {
+        domainText.setText(expert.getDomain());
         descTextView.setText(expert.getDescription());
         Picasso.with(getActivity())
                 .load(expert.getPicture().getUrl())
