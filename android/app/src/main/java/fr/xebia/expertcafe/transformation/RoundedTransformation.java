@@ -9,6 +9,10 @@ import android.graphics.Shader;
 
 import com.squareup.picasso.Transformation;
 
+/**
+ * Thanks to @aprock https://gist.github.com/aprock/6213395
+ */
+
 public class RoundedTransformation implements Transformation {
 
     private final int radius;
