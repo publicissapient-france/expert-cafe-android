@@ -32,7 +32,7 @@
             android:paddingBottom="10dp"
             android:paddingTop="5dp"
             app:fillColor="@color/primaryColorDark"
-            app:radius="6dp"
+            app:radius="3dp"
             app:strokeColor="@color/primaryColorDark"/>
     </LinearLayout>
 
