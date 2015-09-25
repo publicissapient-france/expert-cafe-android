@@ -37,7 +37,7 @@ import fr.xebia.expertcafe.common.AppConstant;
 import fr.xebia.expertcafe.common.BaseFragment;
 import fr.xebia.expertcafe.model.Expert;
 import fr.xebia.expertcafe.model.Meeting;
-import fr.xebia.expertcafe.transformation.RoundedTransformation;
+import fr.xebia.expertcafe.transformation.RoundedCornerTransformation;
 import timber.log.Timber;
 
 import static fr.xebia.expertcafe.common.ParseConstant.EXPERT;
@@ -46,7 +46,7 @@ import static fr.xebia.expertcafe.common.ParseConstant.TIME;
 public class ExpertFragment extends BaseFragment {
 
     private static final String BUNDLE_EXPERT_ID = "BUNDLE_EXPERT_ID";
-    private static final RoundedTransformation ROUNDED_TRANSFORMATION = new RoundedTransformation(6, 0);
+    private static final RoundedCornerTransformation ROUNDED_TRANSFORMATION = new RoundedCornerTransformation(6, 0);
     private static final int DELAY_SYNC_TIME = 5_000;
     private static final Handler HANDLER = new Handler();
 
