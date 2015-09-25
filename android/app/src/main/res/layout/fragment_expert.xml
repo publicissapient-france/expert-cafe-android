@@ -45,6 +45,7 @@
                     android:ellipsize="marquee"
                     android:maxHeight="275dp"
                     android:paddingLeft="10dp"
+                    android:textAllCaps="false"
                     tools:text="Mobile"/>
 
                 <ScrollView
