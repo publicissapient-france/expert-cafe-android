@@ -64,7 +64,7 @@ Parse.Cloud.afterSave("Meeting", function (request) {
     };
 
     var Mailgun = require('mailgun');
-    Mailgun.initialize('sandbox61d26f12d55746249806db70da16101b.mailgun.org', 'key-3a3bef104e23f25f6a21a2b566f10e23');
+    Mailgun.initialize('mailgun.xebia.fr', 'key-3a3bef104e23f25f6a21a2b566f10e23');
 
     var query = new Parse.Query("Expert");
     query.get(request.object.get("expert").id, {
