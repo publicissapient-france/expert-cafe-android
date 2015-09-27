@@ -5,7 +5,7 @@ Parse.Cloud.afterSave("Meeting", function (request) {
     var message = function (to, subject, text) {
         Mailgun.sendEmail({
             to: to,
-            from: "marketing@xebia.fr",
+            from: "Xebia <marketing@xebia.fr>",
             subject: subject,
             text: text
         }, {
