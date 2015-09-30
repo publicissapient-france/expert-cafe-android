@@ -74,7 +74,7 @@ dependencies {
             'com.android.support:cardview-v7:23.0.0',
             'com.android.support:design:23.0.0',
             'com.parse.bolts:bolts-android:1.2.1',
-            'com.parse:parse-android:1.10.1',
+            'com.parse:parse-android:1.10.2',
             'com.jakewharton:butterknife:7.0.1',
             'com.jakewharton.timber:timber:3.1.0',
             'com.viewpagerindicator:library:2.4.1@aar',
