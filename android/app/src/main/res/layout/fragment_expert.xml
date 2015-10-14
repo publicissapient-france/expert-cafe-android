@@ -49,12 +49,27 @@
                     tools:text="Simone C."/>
 
                 <TextView
-                    android:id="@+id/domainTextView"
+                    android:id="@+id/foundationTextView"
                     style="@style/AppTheme.TitleText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_below="@id/nameTextView"
+                    android:layout_marginRight="3dp"
+                    android:layout_toRightOf="@id/picImageView"
+                    android:ellipsize="marquee"
+                    android:maxHeight="275dp"
+                    android:paddingLeft="10dp"
+                    android:textAllCaps="false"
+                    tools:text="Mobile"/>
+
+                <TextView
+                    android:id="@+id/domainTextView"
+                    style="@style/AppTheme.TitleText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/foundationTextView"
                     android:layout_marginRight="3dp"
                     android:layout_toRightOf="@id/picImageView"
                     android:ellipsize="marquee"

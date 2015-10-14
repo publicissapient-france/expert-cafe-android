@@ -15,6 +15,7 @@ import java.util.List;
 import butterknife.Bind;
 import fr.xebia.expertcafe.R;
 import fr.xebia.expertcafe.common.BaseActivity;
+import fr.xebia.expertcafe.common.ParseConstant;
 import fr.xebia.expertcafe.model.Expert;
 import fr.xebia.expertcafe.ui.LoopViewPager;
 import timber.log.Timber;
@@ -42,6 +43,7 @@ public class ExpertPagerActivity extends BaseActivity {
 
     private void getExperts() {
         final ParseQuery<Expert> query = new ParseQuery<>(Expert.class);
+        query.orderByAscending(ParseConstant.FOUNDATION);
         query.findInBackground(new FindCallback<Expert>() {
             @Override
             public void done(final List<Expert> experts, ParseException e) {

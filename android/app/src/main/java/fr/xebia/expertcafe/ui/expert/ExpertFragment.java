@@ -58,6 +58,7 @@ public class ExpertFragment extends BaseFragment {
     @Bind(R.id.timesGroup) ViewGroup timesGroup;
     @Bind(R.id.domainTextView) TextView domainText;
     @Bind(R.id.nameTextView) TextView nameTextView;
+    @Bind(R.id.foundationTextView) TextView foundationTextView;
 
     private final View.OnClickListener onClickListener = new View.OnClickListener() {
         @Override
@@ -129,6 +130,7 @@ public class ExpertFragment extends BaseFragment {
 
     protected void bindView() {
         nameTextView.setText(expert.getName());
+        foundationTextView.setText(expert.getFoundation());
         domainText.setText(expert.getDomain());
         descTextView.setText(expert.getDescription());
         Picasso.with(getActivity())

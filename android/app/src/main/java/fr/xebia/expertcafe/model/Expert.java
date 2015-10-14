@@ -58,4 +58,8 @@ public class Expert extends ParseObject {
     public String getName() {
         return getString(ParseConstant.NAME);
     }
+
+    public String getFoundation() {
+        return getString(ParseConstant.FOUNDATION);
+    }
 }
