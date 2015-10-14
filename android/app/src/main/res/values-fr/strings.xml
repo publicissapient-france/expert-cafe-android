@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_available_time">Horaire</string>
+    <string name="title_subscription">Inscription</string>
+    <string name="name">Nom</string>
+    <string name="email">Email</string>
+    <string name="subject">Sujet</string>
+    <string name="button_subscribe">Prendre rendez-vous</string>
+</resources>
