@@ -4,18 +4,18 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import fr.xebia.expertcafe.model.Expert;
+import fr.xebia.expertcafe.ui.LoopViewPager;
 
 public class ExpertPagerAdapter extends FragmentPagerAdapter {
 
-    public final ArrayList<Expert> experts;
+    public final List<Expert> experts;
 
-    public ExpertPagerAdapter(FragmentManager fm) {
+    public ExpertPagerAdapter(FragmentManager fm, List<Expert> experts) {
         super(fm);
-        this.experts = new ArrayList<>();
+        this.experts = experts;
     }
 
     @Override
@@ -23,18 +23,9 @@ public class ExpertPagerAdapter extends FragmentPagerAdapter {
         return experts.size();
     }
 
-    public void setExperts(List<Expert> experts) {
-        this.experts.clear();
-        this.experts.addAll(experts);
-        notifyDataSetChanged();
-    }
-
     @Override
     public Fragment getItem(int position) {
-        if (position < experts.size()) {
-            return ExpertFragment.newInstance(experts.get(position).getObjectId());
-        }
-        return null;
+        return ExpertFragment.newInstance(experts.get(LoopViewPager.toRealPosition(position, experts.size())).getObjectId());
     }
 
 }
