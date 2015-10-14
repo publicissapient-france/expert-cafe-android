@@ -6,6 +6,14 @@
     <string name="email">Email</string>
     <string name="subject">Subject</string>
     <string name="button_subscribe">Subscribe</string>
+    <string name="toast_confirm_appointment">Appointment booked, confirmation sent by email</string>
+    <string name="toast_cannot_book">Cannot book appointment</string>
+    <string name="toast_cannot_check_time">Cannot check time availability</string>
+    <string name="dialog_all_fields_mandatory">All fields are mandatory, please edit form</string>
+    <string name="dialog_alert">Alert</string>
+    <string name="dialog_time_already_chosen">Chosen time already booked, please choose another time</string>
+    <string name="progress_checking_time">Checking time availability</string>
+    <string name="progress_saving_appointment">Saving appointment</string>
 
     <string name="TEN_0">10h–10h15</string>
     <string name="TEN_1">10h15–10h30</string>

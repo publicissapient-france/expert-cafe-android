@@ -200,7 +200,7 @@ public class ExpertFragment extends BaseFragment {
             final ParseQuery<Meeting> query = new ParseQuery<>(Meeting.class);
             query.whereEqualTo(EXPERT, expert);
             query.whereEqualTo(TIME, time.name());
-            final ProgressDialog dialog = ProgressDialog.show(getActivity(), null, "Checking time availability");
+            final ProgressDialog dialog = ProgressDialog.show(getActivity(), null, getActivity().getString(R.string.progress_checking_time));
             query.countInBackground(new CountCallback() {
                 @Override
                 public void done(int count, ParseException e) {
@@ -210,17 +210,17 @@ public class ExpertFragment extends BaseFragment {
                             syncTime();
                             alertTimeBooked();
                         } else {
-                            dialog.setMessage("Saving appointment");
+                            dialog.setMessage(getActivity().getString(R.string.progress_saving_appointment));
                             meeting.saveInBackground(new SaveCallback() {
                                 @Override
                                 public void done(ParseException e) {
                                     dialog.dismiss();
                                     if (e == null) {
-                                        Toast.makeText(getActivity(), "Appointment booked, confirmation sent by email", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(getActivity(), R.string.toast_confirm_appointment, Toast.LENGTH_LONG).show();
                                         clearForm();
                                         syncTime();
                                     } else {
-                                        Toast.makeText(getActivity(), "Cannot book appointment", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(getActivity(), R.string.toast_cannot_book, Toast.LENGTH_LONG).show();
                                         Timber.e(e, "Cannot book appointment");
                                     }
                                 }
@@ -229,7 +229,7 @@ public class ExpertFragment extends BaseFragment {
                     } else {
                         dialog.dismiss();
                         Timber.e(e, "Cannot check time availability");
-                        Toast.makeText(getActivity(), "Cannot check time availability", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), R.string.toast_cannot_check_time, Toast.LENGTH_SHORT).show();
                     }
                 }
             });
@@ -238,8 +238,8 @@ public class ExpertFragment extends BaseFragment {
 
     private void alertFormInvalid() {
         AlertDialog dialog = new AlertDialog.Builder(getActivity()).create();
-        dialog.setMessage("All fields are mandatory, please edit form");
-        dialog.setTitle("Alert");
+        dialog.setMessage(getActivity().getString(R.string.dialog_all_fields_mandatory));
+        dialog.setTitle(getActivity().getString(R.string.dialog_alert));
         dialog.setButton(DialogInterface.BUTTON_NEUTRAL, getString(android.R.string.ok), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -251,8 +251,8 @@ public class ExpertFragment extends BaseFragment {
 
     private void alertTimeBooked() {
         AlertDialog dialog = new AlertDialog.Builder(getActivity()).create();
-        dialog.setMessage("Chosen time already booked, please choose another time");
-        dialog.setTitle("Alert");
+        dialog.setMessage(getActivity().getString(R.string.dialog_time_already_chosen));
+        dialog.setTitle(getActivity().getString(R.string.dialog_alert));
         dialog.setButton(DialogInterface.BUTTON_NEUTRAL, getString(android.R.string.ok), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {

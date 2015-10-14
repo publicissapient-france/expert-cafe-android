@@ -6,4 +6,12 @@
     <string name="email">Email</string>
     <string name="subject">Sujet</string>
     <string name="button_subscribe">Prendre rendez-vous</string>
+    <string name="toast_confirm_appointment">Rendez-vous enregistré, les confirmations ont été envoyées par email</string>
+    <string name="toast_cannot_book">Impossible de réserver le rendez-vous</string>
+    <string name="toast_cannot_check_time">Impossible de vérifier le créneau horaire</string>
+    <string name="dialog_all_fields_mandatory">Tous les champs sont obligatoire, veuillez compléter le formulaire</string>
+    <string name="dialog_alert">Attention</string>
+    <string name="dialog_time_already_chosen">Horaire déjà sélectionnée, choisissez un autre moment</string>
+    <string name="progress_checking_time">Vérification du créneau horaire</string>
+    <string name="progress_saving_appointment">Sauvegarde du rendez-vous</string>
 </resources>
