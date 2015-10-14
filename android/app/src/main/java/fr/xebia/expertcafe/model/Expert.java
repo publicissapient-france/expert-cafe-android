@@ -55,4 +55,7 @@ public class Expert extends ParseObject {
         return getParseFile(ParseConstant.PICTURE);
     }
 
+    public String getName() {
+        return getString(ParseConstant.NAME);
+    }
 }
