@@ -76,28 +76,28 @@ Parse.Cloud.afterSave("Meeting", function (request) {
             var appointmentSubject = request.object.get('subject');
             var expertName = expert.get('name');
 
-            message(expert.get('email'), "Expert Café: new appointment",
-                "Hello " + expertName + "," +
-                "\n\nYou got a new appointment with " + attendeeName + appointmentTime + "." +
-                "\n\nHe wants to talk about:" +
+            message(expert.get('email'), "Expert Café : nouveau rendez-vous",
+                "Bonjour " + expertName + "," +
+                "\n\nNouveau rendez-vous planifié avec " + attendeeName + appointmentTime + "." +
+                "\n\nSujet :" +
                 "\n" + appointmentSubject + "" +
-                "\n\nThanks," +
-                "\nHave fun.");
+                "\n\nMerci," +
+                "\nBonne journée.");
 
-            message(request.object.get("email"), "Expert Café: booked",
-                "Hello " + attendeeName + "," +
-                "\n\nAppointment booked " + appointmentTime + " with " + expertName + " for " + expert.get('domain') + "." +
-                "\n\nYou want to talk about:" +
+            message(request.object.get("email"), "Expert Café : rendez-vous",
+                "Bonjour " + attendeeName + "," +
+                "\n\nRendez-vous pris à " + appointmentTime + " avec " + expertName + " pour " + expert.get('domain') + "." +
+                "\n\nSujet :" +
                 "\n" + appointmentSubject + "" +
-                "\n\nRegards," +
+                "\n\nMerci," +
                 "\nExpert Café Team");
 
-            message(toMarketing, "Expert Café: booked",
-                "Hello," +
-                "\n\n" + attendeeName + " (" + request.object.get('email') + ") booked an appointment with " + expert.get('name') + appointmentTime + "." +
-                "\n\nHe wants to talk about:" +
+            message(toMarketing, "Expert Café : rendez-vous",
+                "Bonjour," +
+                "\n\n" + attendeeName + " (" + request.object.get('email') + ") a pris rendez-vous avec " + expert.get('name') + appointmentTime + "." +
+                "\n\nSujet :" +
                 "\n" + appointmentSubject + "" +
-                "\n\nSee ya.");
+                "\n\nBonne journée.");
         },
         error: function (error) {
             console.log("Cannot get Expert with id " + request.object.get("expert").id);
