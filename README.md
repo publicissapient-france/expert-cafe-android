@@ -13,6 +13,8 @@ Define parse configuration
   
 in your **.gradle** file and run application.
 
+> Ask marketing@xebia.fr for Parse credentials.
+
 ### Parse Cloud
 
 Go to **cloud/** and run
