@@ -53,13 +53,13 @@ Parse.Cloud.afterSave("Meeting", function (request) {
         }
         switch (array[1]) {
             case "0":
-                return " from " + hour + "h to " + hour + "h15";
+                return " de " + hour + "h à " + hour + "h15";
             case "1":
-                return " from " + hour + "h15 to " + hour + "h30";
+                return " de " + hour + "h15 à " + hour + "h30";
             case "2":
-                return " from " + hour + "h30 to " + hour + "h45";
+                return " de " + hour + "h30 à " + hour + "h45";
             case "3":
-                return " from " + hour + "h45 to " + (hour + 1) + "h";
+                return " de " + hour + "h45 à " + (hour + 1) + "h";
         }
     };
 
